@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Defi 1</title>
+    <link rel="stylesheet" href="css/quizz.css">
+
+  </head>
+  <body>
+
+
+
+    <div id="container">
+      <div class="">
+        <div class="">
+          <button>
+            Menu
+          </button>
+
+        <img src="Assets//drapeauEspagne.png" width="30%" height=""0%" class="racoonimg"  id="imgdef1">
+          <div class="questions">
+            <h1 class="question">A quel pays appartient ce drapeau ? </h1>
+            <div class="reponses">
+              <button type="button" name="button" onclick="changeimg();">Italie</button>
+              <button type="button" name="button" onclick="changeimg();">Madrid</button>
+              <button type="button" name="button" onclick="changeimg();">Portugal</button>
+              <button type="button" name="button" onclick="windefi1();">Espagne</button>
+            </div>
+      </div>
+
+           <div class="restart">
+             <button type="button" name="button" id="restart" onclick="history.go(0)">restart</button>
+            </div>
+
+            <div id="winnext">
+              <p>Bravo c'est la bonne réponse !</p>
+              <button type="button" name="button" id="nextquestion" onclick="nextquestion ()">Question suivante</button>
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div id="container2">
+      <div class="">
+        <button>
+          Menu
+        </button>
+        <img src="Assets/hipojpg.jpg" width="30%" height=""0%" class="racoonimg"  id="imghipo">
+          <div class="questions">
+            <h1 class="question">Qu'est ce que c'est ? </h1>
+            <div class="reponses">
+              <button type="button" name="button" onclick="changeimg();">Ta copine qui prend un bain</button>
+              <button type="button" name="button" onclick="changeimg();">Une loutre</button>
+              <button type="button" name="button" onclick="changeimg();">Une chocolatin</button>
+              <button type="button" name="button" onclick="windefi1();">Un hippopotame</button>
+
+              <div class="restart">
+                <button type="button" name="button" id="restart" onclick="history.go(0)">restart</button>
+               </div>
+
+              <div id="winnext">
+                <p>Bravo c'est la bonne réponse !</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="js/quizz.js" charset="utf-8"></script>
+
+  </body>
+</html>

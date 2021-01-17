@@ -1,0 +1,110 @@
+html{
+  font-family: arial;
+}
+
+body{
+  background: #fffcf9;
+}
+
+h1{
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+p{
+  font-size: 25px;
+  padding: 3px;
+  color: black;
+}
+
+#resultat{
+  background-color: red;
+}
+
+#Votrenombre {
+  font-family:arial;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+/* MENU*/
+button {
+  background: #ff9234;
+  color: white;
+  border: 0;
+  padding: .5em 1em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: all .1s;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+/* effet quand on passe la souris sur le bouton */
+button:hover {
+  background: #35d0ba;
+}
+
+
+
+nav {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; /* le menu prend toute la largeur de l'écran */
+  display: none;
+}
+
+ul {
+  list-style: none; padding: 0;
+   z-index: 2; /* pour le menu passe devant l'ombre */
+}
+
+ul li {
+  text-align: center;
+  animation: .3s print;/* animation de l'apparition du menu */
+}
+
+li a {
+  text-decoration: none; font-size: 3em;
+  text-transform: uppercase;
+  font-weight: bold; font-family: arial;
+  color: white;
+}
+
+ul li a:hover { color: #ff9234; } /* quand on passe sur un lien du menu il devient orange */
+
+.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ombre */
+.backdrop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, .9);
+  cursor: pointer;
+  animation: fade .1s;
+  z-index: 1;
+}
+
+/* animation qui permet d'afficher le menu */
+@keyframes print {
+  from {
+    margin-top: -50px; opacity: 0;
+  }
+  to {
+    margin-top: 0; opacity: 1;
+  }
+}
+
+/* animation pour faire apparaître l'ombre progressivement */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

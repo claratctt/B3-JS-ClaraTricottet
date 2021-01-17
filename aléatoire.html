@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="css/aléatoire.css">
+
+
+     <title>Jeu nombre aléatoire</title>
+   </head>
+   <body>
+     <button>
+       Menu
+     </button>
+     <h1>Devine le nombre</h1>
+
+     <p> Entrez un nombre entre 1 et 100 pour deviner le nombre aléatoire ( vous avez 3 essais ).</p>
+
+     <form>
+       <label for="essayer" id="Votrenombre">Votre nombre: </label> <input type="text" id="essayer">
+       <input type="submit" value="Tester" onclick ="Tester()" id="b">
+     </form>
+
+     <div>
+       <p id="t"></p>  <p id="resultat"></p>
+     </div>
+
+
+
+  <script src="js/aléatoire.js"></script>
+
+  </body>
+</html>

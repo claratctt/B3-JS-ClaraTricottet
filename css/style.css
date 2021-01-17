@@ -1,0 +1,170 @@
+/*--------------------------Menu ----------------------------------------------------------------------------------------------*/
+
+button {
+  background: #ff9234;
+  color: white;
+  border: 0;
+  padding: .5em 1em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: all .1s;
+  margin-top: 30px;
+  margin-left: 60px;
+
+
+}
+/* effet quand on passe la souris sur le bouton */
+button:hover {
+  background: #35d0ba;
+}
+
+p{
+  color:black;
+}
+
+nav {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; /* le menu prend toute la largeur de l'écran */
+  display: none;
+}
+
+ul {
+  list-style: none; padding: 0;
+   z-index: 2; /* pour le menu passe devant l'ombre */
+}
+
+ul li {
+  text-align: center;
+  animation: .3s print;/* animation de l'apparition du menu */
+}
+
+li a {
+  text-decoration: none; font-size: 3em;
+  text-transform: uppercase;
+  font-weight: bold; font-family: arial;
+  color: white;
+}
+
+ul li a:hover { color: #ff9234; } /* quand on passe sur un lien du menu il devient orange */
+
+.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ombre */
+.backdrop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, .9);
+  cursor: pointer;
+  animation: fade .1s;
+  z-index: 1;
+}
+
+/* animation qui permet d'afficher le menu */
+@keyframes print {
+  from {
+    margin-top: -50px; opacity: 0;
+  }
+  to {
+    margin-top: 0; opacity: 1;
+  }
+}
+
+/* animation pour faire apparaître l'ombre progressivement */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*--------------------------Page d'accueil ----------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /*background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)),/url('./assets/wood-light-vacation-picnic-60006.jpg') no-repeat;*/
+    background-color: #161616;
+    /*background-size: cover;*/
+    background-position: center;
+    font-family: sans-serif;
+    position: relative;
+}
+
+#text{
+  color: white;
+  font-size: 40px;
+  text-decoration-color: center;
+  margin-top: 300px;
+  text-transform: uppercase;
+
+}
+
+.showDate {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    line-height: 1.14;
+    color: #fff;
+}
+
+.showDate h1, h3 {
+    font-size: 3.5em;
+    font-weight: 200;
+}
+
+
+
+/*EFFET TEXTE TYPING*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+#coding{
+  color: #44e5e7;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container p span.typed-text {
+  font-weight: normal;
+  color: #ff9234;
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
